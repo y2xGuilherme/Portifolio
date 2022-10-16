@@ -1,0 +1,251 @@
+body{
+    background-image: url(../imagens/fundo-site.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    font-family: 'VT323', monospace;
+    color: #f3f3f3;
+    font-size: 18px; /*todos os textos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/*.cartao{
+    background-color: #070d12;
+    width: 370px;
+    border: 5px solid rgb(red, green, blue);
+    border-radius: 10px;
+    overflow: hidden;
+}*/
+
+.cartao{
+    position: relative;
+    width: 700px;
+    background-color: #070d12;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartao::before, .cartao::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    border-radius: 7px;
+    overflow: hidden;
+    background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055,
+    #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
+    background-size: 300%;
+    font: bold 2em 'Century Gothic';
+    text-transform: uppercase;
+    animation: AnimarBorda 8s linear alternate infinite;
+}
+
+@keyframes AnimarBorda{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 300%;
+    }
+}
+
+.cartao::after{
+    filter: blur(50px);
+}
+
+.cartao .minhas-informacoes{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*alinha horizontalmente por causa do flex direction column*/
+    gap: 10px;
+}
+
+.cartao .minhas-informacoes img{
+    width: 96px; 
+    height: 96px;
+    border-radius: 50px;
+    border: 4px solid #f3f3f3;
+}
+
+
+.cartao .minhas-informacoes .nome{
+    font-size: 26px;
+    text-align: center;
+    color: #7d54f7;
+}
+
+.cartao .minhas-informacoes .cargo{
+    font-size: 20px;
+    color: #b8bbc5;
+    text-align: center;
+}
+
+.cartao .conteudo{
+    margin-top: 0px;
+}
+
+.cartao .conteudo .abas{
+    display: flex;
+    flex-direction: row;
+}
+
+.cartao .abas .aba{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cartao .abas img{
+    width: 30px;
+}
+
+.cartao .abas .aba.selecionado{
+    background-color: #262626;
+}
+
+.cartao .abas .aba{
+    border-top-right-radius: 7px;
+}
+
+.cartao .informacoes-abas{
+    background-color: #262626;
+    border-bottom-right-radius: 7px;
+}
+
+.cartao .abas .aba:hover{
+    background-color: #414141; /*quando passa o mouse por cima*/
+}
+
+.informacoes-abas .informacao{
+    min-height: 260px;
+    padding: 15px;
+    display: none;
+}
+
+.informacoes-abas .informacao.selecionado{
+    display: block;
+    border-radius: 7px;
+    max-width: 600px;
+}
+
+.informacoes-abas .sub-titulo{
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.informacoes-abas .descricao{
+    font-size: 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 15px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 25px;
+}
+
+.informacoes-abas .descricao span{
+    color: #7d54f7;
+}
+
+/*-----------------*/
+
+.informacoes-abas .redes{
+    width: 475px;
+}
+
+.redes-sociais{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.redes-sociais li a{
+    width: 250px;
+    display: block;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 7px;
+}
+
+.redes-sociais li a:hover{
+    opacity: 0.8;
+}
+
+.redes-sociais .twitter{
+    background-color: #06c185;
+}
+
+.redes-sociais .instagram{
+    background-color: #1d87bd;
+}
+
+.redes-sociais .github{
+    background-color: #545454;
+}
+
+
+/* portifolio */
+
+
+.informacoes-abas .portifolio{
+    width: 475px;
+}
+
+.meus-projetos{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.meus-projetos li a{
+    width: 250px;
+    display: block;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 7px;
+}
+
+.meus-projetos li a:hover{
+    opacity: 0.8;
+}
+
+.meus-projetos .relogio-analogico{
+    background-color: #06c185;
+}
+
+.meus-projetos .relogio-digital{
+    background-color: #1d87bd;
+}
+
+.meus-projetos .mario-jump{
+    background-color: #545454;
+}
+
+
+
+

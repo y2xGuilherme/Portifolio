@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/rolagem.css">
+
+    <link rel="shortcut icon" href="./src/ico/ico.ico" type="image/x-icon">
+    
+
+    <title>Portifolio</title>
+</head>
+<body>
+    <!-- corpo -->
+    <main class="cartao">
+        <div class="minhas-informacoes"> 
+            <img src="./src/imagens/foto-perfil.jpg" alt="Proile Picture">
+            <h1 class="nome">Guilherme Eduardo</h1>
+            <h2 class="cargo">Desenvolvedor FrontEnd Júnior</h2>
+        </div>
+
+        <div class="conteudo">
+            <ul class="abas">
+                <li class="aba selecionado" id="sobre-mim">
+                    <img src="./src/imagens/sobre.gif" alt="icone sobre">
+                </li>
+                <li class="aba"  id="minhas-redes">
+                    <img src="./src/imagens/coracao.gif" alt="icone coracao">
+                </li>
+                <li class="aba" id="portifolio">
+                    <img src="./src/imagens/check.gif" alt="icone check">
+                </li>
+            </ul>
+
+            <div class="informacoes-abas">
+                <div class="informacao selecionado" id="informacao-sobre-mim">
+                    <h3 class="sub-titulo">Sobre</h3>
+
+                    <div class="descricao">
+                        <p>Oi! Meu nome é <span>Guilherme Eduardo</span>, seja bem-vindo(a)!</p>
+
+                        <p>Sou um desenvolvedor iniciante. Sempre tive o sonho de me tornar um programador e 
+                        agora estou buscando transformar esse sonho em realidade.  <br>
+                        Atualmente estudo <span>HTML, CSS, JavaScript e Python</span>.<br>
+                        Meus Hobbies são jogar Voleibol, ouvir Música e ir à Academia
+                        </p>
+                    </div>
+                </div>
+
+                <div class="informacao" id="informacao-minhas-redes">
+                    <h3 class="sub-titulo">Minhas Redes</h3>
+                    
+                    <div class="redes">
+                    <ul class="redes-sociais">
+                        <li>
+                            <a href="https://twitter.com/YxxGuilherme" target="_blank" class="twitter">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/y2x.guilherme/" target="_blank" class="instagram">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/y2xGuilherme" target="_blank" class="github">GitHub</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                
+                <div class="informacao" id="informacao-portifolio">
+                    <h3 class="sub-titulo">Meus Projetos</h3>
+                    
+                    <div class="portifolio">
+                    <ul class="meus-projetos">
+                        <li>
+                            <a href="https://y2xguilherme.github.io/Relogio-Analogico/" target="_blank" class="relogio-analogico">Relógio Analógico</a>
+                        </li>
+                        <li>
+                            <a href="https://y2xguilherme.github.io/Relogio-Digital/" target="_blank" class="relogio-digital">Relógio Digital</a>
+                        </li>
+                        <li>
+                            <a href="https://y2xguilherme.github.io/First-Game/" target="_blank" class="mario-jump">Mario Jump</a>
+                        </li>
+                        <li>
+                    </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+<script src="./src/js/index.js"></script>
+</body>
+</html>
